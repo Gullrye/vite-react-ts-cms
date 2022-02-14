@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
   extends: [
     'plugin:react/recommended',
@@ -21,6 +22,7 @@ module.exports = {
   rules: {
     'arrow-body-style': 0,
     'jsx-a11y/label-has-for': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
     'max-lines-per-function': [
       2,
       { max: 320, skipComments: true, skipBlankLines: true }
