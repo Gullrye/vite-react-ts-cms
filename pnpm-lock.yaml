@@ -4,6 +4,8 @@ specifiers:
   '@types/node': ^17.0.17
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
+  '@types/react-router-config': ^5.0.6
+  '@types/react-router-dom': ^5.2.0
   '@typescript-eslint/eslint-plugin': ^4.33.0
   '@typescript-eslint/parser': ^4.33.0
   '@vitejs/plugin-react': ^1.0.7
@@ -29,6 +31,7 @@ specifiers:
   react-dom: ^17.0.2
   react-intl: ^5.24.6
   react-router: 5.2.0
+  react-router-config: ^5.1.1
   react-router-dom: 5.2.0
   stylelint: ^14.5.0
   stylelint-config-standard: ^25.0.0
@@ -51,11 +54,14 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-intl: 5.24.6_react@17.0.2+typescript@4.5.5
   react-router: 5.2.0_react@17.0.2
+  react-router-config: 5.1.1_react-router@5.2.0+react@17.0.2
   react-router-dom: 5.2.0_react@17.0.2
 
 devDependencies:
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
+  '@types/react-router-config': 5.0.6
+  '@types/react-router-dom': 5.3.3
   '@typescript-eslint/eslint-plugin': 4.33.0_959502c0ea240e86d4d2ba8b8c0fee45
   '@typescript-eslint/parser': 4.33.0_eslint@7.32.0+typescript@4.5.5
   '@vitejs/plugin-react': 1.2.0
@@ -548,6 +554,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@types/history/4.7.11:
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+    dev: true
+
   /@types/hoist-non-react-statics/3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
@@ -589,6 +599,29 @@ packages:
     dependencies:
       '@types/react': 17.0.39
     dev: false
+
+  /@types/react-router-config/5.0.6:
+    resolution: {integrity: sha512-db1mx37a1EJDf1XeX8jJN7R3PZABmJQXR8r28yUjVMFSjkmnQo6X6pOEEmNl+Tp2gYQOGPdYbFIipBtdElZ3Yg==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 17.0.39
+      '@types/react-router': 5.1.18
+    dev: true
+
+  /@types/react-router-dom/5.3.3:
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 17.0.39
+      '@types/react-router': 5.1.18
+    dev: true
+
+  /@types/react-router/5.1.18:
+    resolution: {integrity: sha512-YYknwy0D0iOwKQgz9v8nOzt2J6l4gouBmDnWqUUznltOTaon+r8US8ky8HvN0tXvc38U9m6z/t2RsVsnd1zM0g==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 17.0.39
+    dev: true
 
   /@types/react/17.0.39:
     resolution: {integrity: sha512-UVavlfAxDd/AgAacMa60Azl7ygyQNRwC/DsHZmKgNvPmRR5p70AJ5Q9EAmL2NWOJmeV+vVUI4IAP7GZrN8h8Ug==}
@@ -3744,6 +3777,17 @@ packages:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-router-config/5.1.1_react-router@5.2.0+react@17.0.2:
+    resolution: {integrity: sha512-DuanZjaD8mQp1ppHjgnnUnyOlqYXZVjnov/JzFhjLEwd3Z4dYjMSnqrEzzGThH47vpCOqPPwJM2FtthLeJ8Pbg==}
+    peerDependencies:
+      react: '>=15'
+      react-router: '>=5'
+    dependencies:
+      '@babel/runtime': 7.17.2
+      react: 17.0.2
+      react-router: 5.2.0_react@17.0.2
+    dev: false
 
   /react-router-dom/5.2.0_react@17.0.2:
     resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==}

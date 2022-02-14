@@ -19,6 +19,7 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint'],
+  // 0 off, 1 warn, 2 err
   rules: {
     'arrow-body-style': 0,
     'jsx-a11y/label-has-for': 0,
@@ -29,7 +30,7 @@ module.exports = {
     ],
     'no-confusing-arrow': 0,
     'no-nested-ternary': 0,
-    'no-console': 2,
+    'no-console': 0,
     'no-param-reassign': [
       2,
       { props: true, ignorePropertyModificationsFor: ['draft'] }
