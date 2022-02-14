@@ -9,10 +9,8 @@
     "prettier": "prettier --write .",
     "lint:lint-staged": "lint-staged"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
