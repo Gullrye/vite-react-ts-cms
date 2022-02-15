@@ -1,4 +1,4 @@
-import Layouts from '@/layouts'
+import BasicLayouts from '@/layouts'
 import Advert from '@/views/advert'
 import Article from '@/views/article'
 import Dashboard from '@/views/dashboard'
@@ -7,15 +7,14 @@ import Release from '@/views/release'
 import Setting from '@/views/setting'
 import User from '@/views/user'
 import NotFound from '@/views/404'
-import { RouteConfig } from 'react-router-config'
 import { Redirect } from 'react-router-dom'
 import React, { ReactNode } from 'react'
 import Login from '@/views/login'
 
-const routes: RouteConfig[] = [
+const routes: any[] = [
   {
     path: '/',
-    component: Layouts,
+    component: BasicLayouts,
     routes: [
       {
         path: '/',

@@ -1,0 +1,38 @@
+@import '@/assets/less/variables';
+:global(.for-container) {
+  ul li ul {
+    list-style-type: none;
+  }
+}
+html {
+  .scrollbar(@width: 0px, @trackBg: rgb(240, 242, 245), @thumbBg: #fff);
+}
+.scrollbar(@width: 8px, @trackBg: #f0f2f5, @thumbBg: #333, @thumbHoverBg: #222) {
+  &::-webkit-scrollbar {
+    width: @width;
+    height: @width;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background: @trackBg;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: @thumbBg;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: @thumbHoverBg;
+  }
+}
+.basicLayout {
+  .contentLayout {
+    overflow-x: hidden;
+  }
+}
+.content {
+  margin: 58px 10px 10px 150px;
+  padding: 20px;
+  min-width: @content-width;
+  min-height: calc(100vh - @header-height - 20px - 32px);
+  background: @white;
+}

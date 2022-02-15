@@ -1,0 +1,121 @@
+@import 'variables';
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+.block-ellipsis(@line: 2) {
+  display: box;
+  overflow: hidden;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
+.nowrap {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.break-all {
+  word-break: break-all;
+  white-space: normal;
+}
+.break-word {
+  word-wrap: break-word;
+  white-space: normal;
+}
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.TypographyTitle(@fontWeight: @font-bold) {
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: @fontWeight;
+  letter-spacing: normal;
+}
+
+.TypographyTitleH1(@color: @black) {
+  line-height: 1.4;
+  font-size: 40px;
+  color: @color;
+  .TypographyTitle();
+}
+
+.TypographyTitleH2(@color: @black) {
+  line-height: 1.38;
+  font-size: 32px;
+  color: @color;
+  .TypographyTitle();
+}
+
+.TypographyTitleH3(@color: @black) {
+  line-height: 1.33;
+  font-size: @size-mid-large;
+  color: @color;
+  .TypographyTitle();
+}
+
+.TypographyTitleH4(@color: @black) {
+  line-height: 1.4;
+  font-size: @size-tiny-large;
+  color: @color;
+  .TypographyTitle();
+}
+
+.TypographyTitleH5(@color: @black) {
+  line-height: 1.43;
+  font-size: @size-normal;
+  color: @color;
+  .TypographyTitle(bold);
+}
+
+.TypographyTitleH6(@color: @black) {
+  line-height: 1.67;
+  font-size: @size-small;
+  color: @color;
+  .TypographyTitle(bold);
+}
+
+.TypographySymbolText(@color: @black) {
+  line-height: 1.67;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: @font-bold;
+  font-size: @size-small;
+  color: @color;
+  letter-spacing: normal;
+}
+
+.TypographyParagraphCode(@color: #363e4a) {
+  line-height: 2;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-size: @size-small;
+  color: @color;
+  letter-spacing: normal;
+}
+
+.TypographyParagraph(@color: @black) {
+  line-height: 1.67;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-size: @size-small;
+  color: @color;
+  letter-spacing: normal;
+}

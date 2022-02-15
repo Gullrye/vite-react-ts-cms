@@ -16,7 +16,10 @@ http.interceptors.request.use(
 
 http.interceptors.response.use(
   res => {
-    return res
+    if (res.status !== 200) {
+      return res.data.msg
+    }
+    return res.data.result
   },
   err => {
     console.log(err)
