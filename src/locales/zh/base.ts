@@ -1,5 +1,5 @@
 export default {
-  CMS: '博客系统',
+  CMS: '是你啊',
   'Temporarily not opened': '暂未开放',
   Edit: '编辑',
   Delete: '删除',
