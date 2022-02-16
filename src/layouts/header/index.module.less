@@ -1,9 +1,12 @@
 @import '@/assets/less/variables';
 // Header
 .header {
+  display: flex;
   position: fixed;
   left: 140px;
   z-index: 100;
+  justify-content: flex-end;
+  align-items: center;
   padding-left: 0;
   padding-right: 30px;
   width: calc(100% - 140px);
@@ -16,21 +19,23 @@
 
 // RightContent
 .rightContent {
-  float: right;
+  display: flex;
 }
 .overlay {
   position: fixed;
   top: @header-height + 2px !important;
 }
 .currentUser {
+  display: flex;
+  align-items: center;
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
 }
 .avatar {
   margin-right: 10px;
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
   img {
     width: 30px;
     height: 30px;

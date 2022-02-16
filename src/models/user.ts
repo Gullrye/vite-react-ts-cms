@@ -13,14 +13,24 @@ export interface CurrentUser {
 }
 
 function useUser() {
+  // 用户信息
   const [userInfo, setUserInfo] = useState({} as CurrentUser)
   const getUserInfoData = async () => {
     const data = await getUserInfo()
     setUserInfo(data)
   }
+
+  // 语言切换设置
+  const [lang, setLang] = useState('zh-cn')
+  // const triggerLang = (lang: string) => {
+  //   setLang(lang)
+  // }
   return {
     userInfo,
-    getUserInfoData
+    getUserInfoData,
+
+    lang,
+    setLang
   }
 }
 

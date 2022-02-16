@@ -14,23 +14,23 @@ import Footer from './footer'
 import Sider from './sider'
 import styles from './index.module.less'
 import { IntlContext } from '@/utils/context/intl'
+import useUserModel from '@/models/user'
 
 const cache = createIntlCache()
 
 interface BasicLayoutProps {
   children: JSX.Element
   location: any
-  lang: string
   route: RouteConfig
 }
 
 const BasicLayouts: React.FC<BasicLayoutProps> = ({
   children,
   location,
-  // 如果 lang 无默认值，会报错 Error: [@formatjs/intl Error INVALID_CONFIG] "locale" was not configured, using "en" as fallback.
-  lang = 'zh-cn',
   route
 }) => {
+  const user = useUserModel()
+  const lang = user.lang
   // 获取对应类型的中文或英文配置
   const getLocale: (lang: string, type: string) => any = useCallback(
     (lang, type) => {
@@ -73,7 +73,7 @@ const BasicLayouts: React.FC<BasicLayoutProps> = ({
       <ConfigProvider locale={getLocale(lang, 'antd')}>
         <IntlContext.Provider value={formatMsg}>
           <Layout className={styles.basicLayout}>
-            <Sider />
+            <Sider location={location} />
             <Layout className={styles.contentLayout}>
               <Header />
               <Layout.Content className={styles.content}>
